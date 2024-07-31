@@ -42,11 +42,6 @@ class Player {
             console.log(game.currentRoom.getLongDescription());
             console.log(game.currentRoom.getItems());
             console.log(game.currentRoom.getClue());
-
-            if (this.moveCount > 3) {
-                console.log("Você se moveu mais de 3 vezes. Você perdeu!");
-                process.exit();
-            }
         } else {
             console.log("Não há saída nessa direção!");
         }
@@ -65,7 +60,7 @@ class Player {
             this.inventory.push(item);
             console.log(`Você pegou o(a) ${itemName}.`);
 
-            if (itemName === 'mala de dinheiro') {
+            if (itemName === 'mala') {
                 console.log("Você encontrou a mala de dinheiro. Você venceu!");
                 process.exit();
             }

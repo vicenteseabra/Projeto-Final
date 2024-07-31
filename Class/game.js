@@ -32,9 +32,9 @@ class Game {
         let note = new Item('nota', 'Uma nota com uma pista crucial.');
         let pen = new Item('caneta', 'Uma caneta velha.');
         let box = new Item('caixa', 'Uma caixa que pode conter algo valioso.');
-        let watch = new Item('relógio', 'Um relógio antigo.');
-        let paperPiece = new Item('pedaço de papel', 'Um pedaço de papel com um código.');
-        let moneyBag = new Item('mala de dinheiro', 'A mala de dinheiro que você está procurando.');
+        let watch = new Item('relogio', 'Um relógio antigo.');
+        let paperPiece = new Item('papel', 'Um pedaço de papel com um código.');
+        let moneyBag = new Item('mala', 'A mala de dinheiro que você está procurando.');
 
         kitchen.addItem(key);
         kitchen.addItem(recipeNote);

@@ -24,10 +24,6 @@ if(resposta.toLowerCase() == "sim"){
         let comand = prompt("Digite um comando: ");
         game.player.processCommand(comand, game);
         console.log("");
-        if(game.currentRoom.name == 'Banheiro' ){
-            console.log("Você ganhou");
-            return;
-        }
     }
     console.log("Você se moveu mais de 3 vezes. Você perdeu!");
 
