@@ -1,7 +1,7 @@
 const Game = require("./Class/game");
 
 const prompt = require("prompt-sync")();
-
+//breve apresentaçao do jogo
 console.log("Bem vindo ao jogo: Caça ao Tesouro na Mansão Misteriosa");
 console.log("\n Uma família deseja contratar o melhor investigador para encontrar uma mala de dinheiro");
 console.log(" Esta mala contém a herança de um senhor que viveu seus últimos dias na sua mansão");
@@ -11,6 +11,8 @@ console.log(" Neste jogo de mistério você será encarregado de encontrar esta 
 console.log("Você deseja embarcar nessa aventura e ajudar essa família?");
 let resposta = prompt("Digite sim ou nao: ");
 let game;
+
+//inicia o jogo
 if(resposta.toLowerCase() == "sim"){
     console.log("\nVamos nessa!");
     const nome = prompt("Como você gostaria de ser chamado? ");
@@ -30,9 +32,10 @@ if(resposta.toLowerCase() == "sim"){
 }else{
     console.log("Obrigado, até a próxima!");
 }
+//explicaçao do jogo
 function introduction(){
     console.log("\n\n Antes de embarcarmos nessa jornada preciso explicar algumas coisas ao nosso grande investigador!");
-    console.log(" Neste jogo você tem 3 chances(step) para chegar ao comodo em que está o tesouro");
+    console.log(" Neste jogo você tem 3 chances(passos) para chegar ao comodo em que está o tesouro");
     console.log(" Cada vez que você passa para outro cômodo conta como uma chance.");
     console.log(" Pegue todas os itens que contem dicas e guarde em seu inventario.\n");
     game.player.processCommand('comandos', game);

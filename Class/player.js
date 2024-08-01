@@ -1,10 +1,11 @@
 class Player {
+    //metodo construtor
     constructor(nome) {
         this.nome = nome;
         this.moveCount = 0;
         this.inventory = [];
     }
-
+    //metodo para processar o comando digitado pelo player
     processCommand(command, game) {
         let words = command.split(' ');
         let action = words[0];
@@ -33,7 +34,7 @@ class Player {
                 console.log('Comando desconhecido.');
         }
     }
-
+    //metodo que muda o player de comodo
     goRoom(direction, game) {
         let nextRoom = game.currentRoom.getExit(direction);
         if (nextRoom) {
@@ -46,13 +47,14 @@ class Player {
             console.log("Não há saída nessa direção!");
         }
     }
-
+    // metodo que imprime as caracteristicas do comodo
     lookAround(game) {
         console.log(game.currentRoom.getLongDescription());
         console.log(game.currentRoom.getItems());
         console.log(game.currentRoom.getClue());
     }
 
+    // adciona o item ao array de inventario
     takeItem(itemName, game) {
         let item = game.currentRoom.items.find(i => i.getName() === itemName);
         if (item) {
@@ -69,6 +71,7 @@ class Player {
         }
     }
 
+    // retira o item do item do inventario
     dropItem(itemName, game) {
         let item = this.inventory.find(i => i.getName() === itemName);
         if (item) {
@@ -80,6 +83,7 @@ class Player {
         }
     }
 
+    // mostra os item contidos no inventario(array)
     showInventory() {
         if (this.inventory.length > 0) {
             console.log(`Seu inventário: ${this.inventory.map(item => item.getName()).join(', ')}`);
@@ -87,6 +91,8 @@ class Player {
             console.log("Seu inventário está vazio.");
         }
     }
+
+    // mostra os comandos ao player
     showCommands() {
         console.log("Comandos disponíveis:");
         console.log(" - ir [direção]: Move-se para a direção especificada (ex.: 'ir norte').");
