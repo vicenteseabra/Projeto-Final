@@ -54,8 +54,8 @@ class Game {
         // adciona a dica ao respectivo comodo
         kitchen.setClue('A chave abre algo importante.');
         study.setClue('A nota tem uma pista crucial.');
-        bedroom.setClue('A caixa pode conter algo valioso.');
-        bathroom.setClue('O pedaço de papel tem um código.');
+        bedroom.setClue('A caixa pode mostrar significar algo sobre local.');
+        bathroom.setClue('A mala tem algo valioso.');
 
         this.livingRoom = livingRoom;
         this.kitchen = kitchen;
